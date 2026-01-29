@@ -31,6 +31,28 @@
         <p>&copy; 2024 Mon Site</p>
     </footer>
     
-    <script src="index.html"></script>
+    <script>  
+        
+        // 1. On sélectionne le bouton grâce à son ID "play"
+const boutonPlay = document.getElementById("play");
+
+// 2. On sélectionne TOUTES les vidéos de la page
+// querySelectorAll renvoie une liste (un tableau) contenant tes 2 vidéos
+const mesVideos = document.querySelectorAll("video");
+
+// 3. On détecte le clic sur le bouton
+boutonPlay.addEventListener("click", function() {
+    
+    // 4. On parcourt la liste des vidéos une par une
+    mesVideos.forEach(function(uneVideo) {
+        
+        // 5. On lance la lecture pour chaque vidéo
+        uneVideo.play();
+        
+    });
+    
+    console.log("Lecture lancée sur les deux vidéos !");
+});
+    </script>
 </body>
 </html>
